@@ -1,0 +1,248 @@
+.header {
+  min-height: 80px;
+  padding: 0px 40px;
+  color: #FFF;
+  font-size: 30px;
+  background-image: linear-gradient(3deg, #D0D, #D00);
+  box-shadow: 0px 0px 10px 1px #D0D;
+}
+
+.content {
+  height: calc(100% - 160px);
+  background-color: #EEE;
+
+  .user-section {
+    width: 40%;
+    height: 100%;
+    padding: 40px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 1px #CCC;
+    overflow: auto;
+
+    .input-section {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .section-title {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 24px;
+
+        .add {
+          padding: 2px 5px;
+          font-size: 20px;
+          background: transparent;
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.1s ease;
+
+          &:active {
+            box-shadow: 0px 0px 10px 1px #CCC;
+            transform: scale(1.1);
+          }
+
+          &:focus {
+            box-shadow: 0px 0px 10px 1px #36F;
+          }
+        }
+
+        .fa {
+          color: #0C0;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .section-input {
+        width: 100%;
+        margin-bottom: 14px;
+        padding: 10px;
+        color: #666;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px #DDD;
+
+        &:focus {
+          box-shadow: 0px 0px 10px 1px #36F;
+        }
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        &::placeholder {
+          color: #999;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.preview {
+  height: 100%;
+  background: #FFF;
+  overflow: auto;
+
+  .preview-header {
+    padding: 30px 40px 20px 40px;
+
+    .preview-name {
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    .preview-designation {
+      margin-bottom: 8px;
+      color: #666;
+      font-size: 18px;
+    }
+    
+    .preview-career-summary {
+      color: #333;
+      font-size: 14px;
+    }
+  }
+
+  .preview-contact-info-container {
+    padding: 0px 40px;
+    background-color: #EEE;
+  
+    .preview-contact-info-item {
+      width: 33%;
+      margin: 5px 0px;
+      /* margin: 5px 20px; */
+  
+      .preview-contact-info-icon {
+        color: #2aae72;
+      }
+      
+      .preview-contact-info-title {
+        margin-left: 10px;
+        font-size: 11px;
+      }
+      .preview-contact-info-title > a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .preview-section {
+    padding: 20px 40px 0px 40px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  
+    .preview-section-title {
+      margin-bottom: 15px;
+      color: #2aae72;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .preview-section-content {
+      .preview-skill-item {
+        margin: 0px 6px 5px 0px;
+        padding: 5px 10px;
+        color: #FFF;
+        font-size: 14px;
+        background-color: #2aae72;
+        border-radius: 5px;
+      }
+
+      .preview-experience-item {
+        margin-left: 15px;
+        margin-bottom: 20px;
+      }
+      .preview-experience-item:last-child {
+        margin-bottom: 0px;
+      }
+      
+      .preview-experience-title {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      
+      .preview-experience-company {
+        margin-bottom: 4px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      
+      .preview-experience-duration {
+        margin-bottom: 10px;
+        color: #666;
+        font-size: 14px;
+        font-style: italic;
+      }
+      
+      .preview-experience-point {
+        margin-bottom: 2px;
+        font-size: 14px;
+      }
+      
+      .preview-experience-bullet {
+        color: #2aae72;
+      }
+
+      .preview-training-dev-point {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+      
+      .preview-training-dev-bullet {
+        color: #2aae72;
+      }
+
+      .preview-education-content {
+        margin-left: 15px;
+      }
+      
+      .preview-education-title {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      
+      .preview-education-college {
+        margin-bottom: 4px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      
+      .preview-education-duration {
+        margin-bottom: 10px;
+        color: #666;
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.footer {
+  min-height: 80px;
+  padding: 0px 60px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 10px 1px #CCC;
+
+  .build {
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #0D0;
+  }
+}

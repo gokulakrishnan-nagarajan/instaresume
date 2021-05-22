@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+
+import BuildPage from './components/BuildPage/BuildPage';
+import PrintPage from './components/PrintPage/PrintPage';
+
+import './assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container flex-column">
+      <HashRouter>
+        <Switch>
+          <Route exact path="/">
+            <BuildPage></BuildPage>
+          </Route>
+          <Route exact path="/print">
+            <PrintPage></PrintPage>
+          </Route>
+        </Switch>
+      </HashRouter>
     </div>
   );
 }
