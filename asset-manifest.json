@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/instaresume/static/css/main.f4b27490.chunk.css",
-    "main.js": "/instaresume/static/js/main.58871865.chunk.js",
-    "main.js.map": "/instaresume/static/js/main.58871865.chunk.js.map",
+    "main.css": "/instaresume/static/css/main.0dbdfd88.chunk.css",
+    "main.js": "/instaresume/static/js/main.d17865f4.chunk.js",
+    "main.js.map": "/instaresume/static/js/main.d17865f4.chunk.js.map",
     "runtime-main.js": "/instaresume/static/js/runtime-main.3ee3f920.js",
     "runtime-main.js.map": "/instaresume/static/js/runtime-main.3ee3f920.js.map",
     "static/js/2.36f94220.chunk.js": "/instaresume/static/js/2.36f94220.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.0e15a3fa.chunk.js": "/instaresume/static/js/3.0e15a3fa.chunk.js",
     "static/js/3.0e15a3fa.chunk.js.map": "/instaresume/static/js/3.0e15a3fa.chunk.js.map",
     "index.html": "/instaresume/index.html",
-    "static/css/main.f4b27490.chunk.css.map": "/instaresume/static/css/main.f4b27490.chunk.css.map",
+    "static/css/main.0dbdfd88.chunk.css.map": "/instaresume/static/css/main.0dbdfd88.chunk.css.map",
     "static/js/2.36f94220.chunk.js.LICENSE.txt": "/instaresume/static/js/2.36f94220.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/instaresume/static/media/Roboto-Thin.1711b41f.ttf",
     "static/media/font-awesome.min.css": "/instaresume/static/media/fontawesome-webfont.f691f37e.woff"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.3ee3f920.js",
     "static/js/2.36f94220.chunk.js",
-    "static/css/main.f4b27490.chunk.css",
-    "static/js/main.58871865.chunk.js"
+    "static/css/main.0dbdfd88.chunk.css",
+    "static/js/main.d17865f4.chunk.js"
   ]
 }
