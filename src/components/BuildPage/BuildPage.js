@@ -145,13 +145,20 @@ function BuildPage() {
 
   // Preview HTML Generators
 
+  let skillsFlag = false;
   const skillsArr = skills.split(';');
   const previewSkillsHTML = skillsArr.map((item, index) => {
     item = item.trim();
 
-    return item.length > 0 ? <span key={index} className="preview-skill-item">{item}</span> : null
+    if(item.length > 0) {
+      skillsFlag = true;
+      return <span key={index} className="preview-skill-item">{item}</span>;
+    }
+
+    return null;
   })
 
+  let workExperienceFlag = false;
   const previewWorkExperienceHTML = workExperience.map((item, index) => {
     const keys = Object.keys(item);
     let valid = true;
@@ -169,8 +176,10 @@ function BuildPage() {
       return item.length > 0 ? <div key={index} className="preview-experience-point"><span className="preview-experience-bullet">-</span> {item}</div> : null;
     });
 
-    return (
-      valid ?
+    if(valid) {
+      workExperienceFlag = true;
+
+      return (
         <div key={index} className="preview-experience-item">
           <div className="preview-experience-title">{item.role}</div>
           <div className="preview-experience-company">{item.employer}, {item.location}</div>
@@ -179,17 +188,26 @@ function BuildPage() {
             {descHTML}
           </div>
         </div>
-      : null
-    )
+      )
+    }
+
+    return null;
   });
 
+  let activityFlag = false;
   const activityArr = activity.split(';');
   const previewActivityHTML = activityArr.map((item, index) => {
     item = item.trim();
 
-    return item.length > 0 ? <div key={index} class="preview-training-dev-point"><span class="preview-training-dev-bullet">-</span> {item}</div> : null;
+    if(item.length > 0) {
+      activityFlag = true;
+      return <div key={index} className="preview-training-dev-point"><span className="preview-training-dev-bullet">-</span> {item}</div>;
+    }
+
+    return null;
   });
 
+  let educationFlag = false;
   const previewEducationHTML = education.map((item, index) => {
     const keys = Object.keys(item);
     let valid = true;
@@ -200,15 +218,19 @@ function BuildPage() {
       }
     }
 
-    return (
-      valid ?
-        <div key={index} class="preview-education-content">
-          <div class="preview-education-title">{item.degree} in {item.major}</div>
-          <div class="preview-education-college">{item.college} - {item.location}</div>
-          <div class="preview-education-duration">{item.startDate} - {item.endDate}</div>
+    if(valid) {
+      educationFlag = true;
+
+      return (
+        <div key={index} className="preview-education-content">
+          <div className="preview-education-title">{item.degree} in {item.major}</div>
+          <div className="preview-education-college">{item.college} - {item.location}</div>
+          <div className="preview-education-duration">{item.startDate} - {item.endDate}</div>
         </div>
-      : null
-    )
+      )
+    }
+
+    return null;
   });
 
   // Router
@@ -279,7 +301,7 @@ function BuildPage() {
             {
               email ?
                 <div className="preview-contact-info-item center-center">
-                  <span className="preview-contact-info-icon"><i className="fa fa-envelope" aria-hidden="true"></i></span>
+                  <span className="preview-contact-info-icon fs-14"><i className="fa fa-envelope" aria-hidden="true"></i></span>
                   <span className="preview-contact-info-title">{email}</span>
                 </div>
               : null
@@ -303,7 +325,7 @@ function BuildPage() {
             {
               linkedInURL ?
                 <div className="preview-contact-info-item center-center">
-                  <span className="preview-contact-info-icon"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
+                  <span className="preview-contact-info-icon fs-14 translate-y-1"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
                   <span className="preview-contact-info-title"><a href={linkedInURL} target="_blank">{linkedInText}</a></span>
                 </div>
               : null
@@ -317,30 +339,46 @@ function BuildPage() {
               : null
             }
           </div>
-          <div className="preview-section">
-            <div className="preview-section-title">SKILLS</div>
-            <div className="preview-section-content flex-center flex-wrap">
-              {previewSkillsHTML}
-            </div>
-          </div>
-          <div className="preview-section">
-            <div className="preview-section-title">WORK EXPERIENCE</div>
-            <div className="preview-section-content">
-              {previewWorkExperienceHTML}
-            </div>
-          </div>
-          <div class="preview-section">
-            <div class="preview-section-title">OTHER ACTIVITIES</div>
-            <div class="preview-section-content">
-              {previewActivityHTML}
-            </div>
-          </div>
-          <div class="preview-section">
-            <div class="preview-section-title">EDUCATION</div>
-            <div class="preview-section-content">
-              {previewEducationHTML}
-            </div>
-          </div>
+          {
+            skillsFlag ?
+              <div className="preview-section">
+                <div className="preview-section-title">SKILLS</div>
+                <div className="preview-section-content flex-center flex-wrap">
+                  {previewSkillsHTML}
+                </div>
+              </div>
+            : null
+          }
+          {
+            workExperienceFlag ?
+              <div className="preview-section">
+                <div className="preview-section-title">WORK EXPERIENCE</div>
+                <div className="preview-section-content">
+                  {previewWorkExperienceHTML}
+                </div>
+              </div>
+            : null
+          }
+          {
+            activityFlag ?
+              <div className="preview-section">
+                <div className="preview-section-title">OTHER ACTIVITIES</div>
+                <div className="preview-section-content">
+                  {previewActivityHTML}
+                </div>
+              </div>
+            : null
+          }
+          {
+            educationFlag ?
+              <div className="preview-section">
+                <div className="preview-section-title">EDUCATION</div>
+                <div className="preview-section-content">
+                  {previewEducationHTML}
+                </div>
+              </div>
+            : null
+          }
         </div>
       </div>
       <div className="footer center-flex-end z-1">

@@ -100,7 +100,7 @@ function PrintPage() {
           {
             email ?
               <div className="preview-contact-info-item center-center">
-                <span className="preview-contact-info-icon"><i className="fa fa-envelope" aria-hidden="true"></i></span>
+                <span className="preview-contact-info-icon fs-14"><i className="fa fa-envelope" aria-hidden="true"></i></span>
                 <span className="preview-contact-info-title">{email}</span>
               </div>
             : null
@@ -124,7 +124,7 @@ function PrintPage() {
           {
             linkedInText && linkedInURL ?
               <div className="preview-contact-info-item center-center">
-                <span className="preview-contact-info-icon"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
+                <span className="preview-contact-info-icon fs-14 translate-y-1"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
                 <span className="preview-contact-info-title"><a href={linkedInURL} target="_blank">{linkedInText}</a></span>
               </div>
             : null
